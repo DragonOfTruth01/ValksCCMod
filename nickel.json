@@ -1,10 +1,10 @@
 {
-  "UniqueName": "DragonOfTruth01.GizmoTheFoxCCMod",
+  "UniqueName": "DragonOfTruth01.ValksCCMod",
   "Version": "0.1.0",
   "Author": "DragonOfTruth01",
   "Description": "TBD",
   "RequiredApiVersion": "0.6.0",
-  "EntryPointAssembly": "GizmoTheFoxCCMod.dll",
+  "EntryPointAssembly": "ValksCCMod.dll",
   "Dependencies": [
     {
       "UniqueName": "Shockah.Kokoro",

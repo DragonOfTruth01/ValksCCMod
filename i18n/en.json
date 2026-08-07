@@ -1,14 +1,8 @@
 {
   "character": {
-    "GizmoTheFoxCCMod_Character": {
-      "name": "Gizmo",
-      "description": "Your artificer/alchemist. His cards allow you to <c=boldPink>attune</c> the four elements to <c=boldPink>brew potions</c>."
-    },
-    "GizmoTheFoxCCMod_Potion": {
-      "name": "Potion"
-    },
-    "GizmoTheFoxCCMod_ShimmeringPotion": {
-      "name": "Shimmering Potion"
+    "ValksCCMod_Character": {
+      "name": "Valks",
+      "description": "An intrepid explorer from another realm. Is proficient with armaments and forbidden fire magic, but is plagued by a curse..."
     }
   },
   "action": {

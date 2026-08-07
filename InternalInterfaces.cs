@@ -1,13 +1,13 @@
 ﻿using Nickel;
 
-namespace DragonOfTruth01.GizmoTheFoxCCMod;
+namespace DragonOfTruth01.ValksCCMod;
 
-internal interface IGizmoTheFoxCCModCard
+internal interface IValksCCModCard
 {
     static abstract void Register(IModHelper helper);
 }
 
-internal interface IGizmoTheFoxCCModArtifact
+internal interface IValksCCModArtifact
 {
     static abstract void Register(IModHelper helper);
 }

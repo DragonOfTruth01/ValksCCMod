@@ -2,7 +2,7 @@
 This README was made using Louis3797's awesome-readme-template
 -->
 <div align="center">
-  <h1>Gizmo the Fox Mod</h1>
+  <h1>Valks Mod</h1>
   <p>
     [Description here]
   </p>

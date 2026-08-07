@@ -1,15 +1,15 @@
 ﻿using Nickel;
 using Nickel.Common;
 using HarmonyLib;
-// using DragonOfTruth01.GizmoTheFoxCCMod.Cards;
-// using DragonOfTruth01.GizmoTheFoxCCMod.Artifacts;
+// using DragonOfTruth01.ValksCCMod.Cards;
+// using DragonOfTruth01.ValksCCMod.Artifacts;
 using Microsoft.Extensions.Logging;
 using Nanoray.PluginManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DragonOfTruth01.GizmoTheFoxCCMod;
+namespace DragonOfTruth01.ValksCCMod;
 
 public sealed class ModEntry : SimpleMod
 {
@@ -20,88 +20,74 @@ public sealed class ModEntry : SimpleMod
     internal ILocaleBoundNonNullLocalizationProvider<IReadOnlyList<string>> Localizations { get; }
 
     // Card Frames
-    internal ISpriteEntry GizmoTheFoxCCMod_Character_CardFrame { get; }
-    internal ISpriteEntry GizmoTheFoxCCMod_Potion_CardFrame { get; }
-    internal ISpriteEntry GizmoTheFoxCCMod_ShimmeringPotion_CardFrame { get; }
+    internal ISpriteEntry ValksCCMod_Character_CardFrame { get; }
 
     // Character Panel
-    internal ISpriteEntry GizmoTheFoxCCMod_Character_Panel { get; }
+    internal ISpriteEntry ValksCCMod_Character_Panel { get; }
 
     // Custom Card Arts
-    internal ISpriteEntry GizmoTheFoxCCMod_Character_DefaultCardBG { get; }
+    internal ISpriteEntry ValksCCMod_Character_DefaultCardBG { get; }
 
     // Artifact Arts
 
     // Animation Sprites
-    internal ISpriteEntry GizmoTheFoxCCMod_Character_Neutral_0 { get; }
-    internal ISpriteEntry GizmoTheFoxCCMod_Character_Neutral_1 { get; }
-    internal ISpriteEntry GizmoTheFoxCCMod_Character_Neutral_2 { get; }
+    internal ISpriteEntry ValksCCMod_Character_Neutral_0 { get; }
+    internal ISpriteEntry ValksCCMod_Character_Neutral_1 { get; }
+    internal ISpriteEntry ValksCCMod_Character_Neutral_2 { get; }
 
-    internal ISpriteEntry GizmoTheFoxCCMod_Character_Mini_0 { get; }
+    internal ISpriteEntry ValksCCMod_Character_Mini_0 { get; }
 
-    internal ISpriteEntry GizmoTheFoxCCMod_Character_Squint_0 { get; }
-    internal ISpriteEntry GizmoTheFoxCCMod_Character_Squint_1 { get; }
-    internal ISpriteEntry GizmoTheFoxCCMod_Character_Squint_2 { get; }
+    internal ISpriteEntry ValksCCMod_Character_Squint_0 { get; }
+    internal ISpriteEntry ValksCCMod_Character_Squint_1 { get; }
+    internal ISpriteEntry ValksCCMod_Character_Squint_2 { get; }
 
     // Custom Action Icons
 
     // Custom Status Icons
 
     // Custom Decks
-    internal IDeckEntry GizmoTheFoxCCMod_Character_Deck { get; }
-    internal IDeckEntry GizmoTheFoxCCMod_Potion_Deck { get; }
-    internal IDeckEntry GizmoTheFoxCCMod_ShimmeringPotion_Deck { get; }
+    internal IDeckEntry ValksCCMod_Character_Deck { get; }
 
     // Custom Statuses
 
     // Card List Definitions
-    internal static IReadOnlyList<Type> GizmoTheFoxCCMod_Character_CommonCard_Types { get; } = [
+    internal static IReadOnlyList<Type> ValksCCMod_Character_CommonCard_Types { get; } = [
         
     ];
 
-    internal static IReadOnlyList<Type> GizmoTheFoxCCMod_Character_UncommonCard_Types { get; } = [
+    internal static IReadOnlyList<Type> ValksCCMod_Character_UncommonCard_Types { get; } = [
         
     ];
 
-    internal static IReadOnlyList<Type> GizmoTheFoxCCMod_Character_RareCard_Types { get; } = [
+    internal static IReadOnlyList<Type> ValksCCMod_Character_RareCard_Types { get; } = [
         
     ];
 
-    internal static IReadOnlyList<Type> GizmoTheFoxCCMod_Potion_Types { get; } = [
-        
-    ];
-
-    internal static IReadOnlyList<Type> GizmoTheFoxCCMod_ShimmeringPotion_Types { get; } = [
-        
-    ];
-
-    internal static IReadOnlyList<Type> GizmoTheFoxCCMod_Character_ExeCard_Types { get; } = [
+    internal static IReadOnlyList<Type> ValksCCMod_Character_ExeCard_Types { get; } = [
         
     ];
 
     // Combine all the lists into a single object for reference
-    internal static IEnumerable<Type> GizmoTheFoxCCMod_AllCard_Types = [
-        .. GizmoTheFoxCCMod_Character_CommonCard_Types,
-        .. GizmoTheFoxCCMod_Character_UncommonCard_Types,
-        .. GizmoTheFoxCCMod_Character_RareCard_Types,
-        .. GizmoTheFoxCCMod_Potion_Types,
-        .. GizmoTheFoxCCMod_ShimmeringPotion_Types,
-        .. GizmoTheFoxCCMod_Character_ExeCard_Types
+    internal static IEnumerable<Type> ValksCCMod_AllCard_Types = [
+        .. ValksCCMod_Character_CommonCard_Types,
+        .. ValksCCMod_Character_UncommonCard_Types,
+        .. ValksCCMod_Character_RareCard_Types,
+        .. ValksCCMod_Character_ExeCard_Types
     ];
 
     // Define our artifact lists
-    internal static IReadOnlyList<Type> GizmoTheFoxCCMod_CommonArtifact_Types { get; } = [
+    internal static IReadOnlyList<Type> ValksCCMod_CommonArtifact_Types { get; } = [
         
     ];
 
-    internal static IReadOnlyList<Type> GizmoTheFoxCCMod_BossArtifact_Types { get; } = [
+    internal static IReadOnlyList<Type> ValksCCMod_BossArtifact_Types { get; } = [
         
     ];
 
     // Combine all the artifacts into a single list
-    internal static IEnumerable<Type> GizmoTheFoxCCMod_AllArtifact_Types = [
-        .. GizmoTheFoxCCMod_CommonArtifact_Types,
-        .. GizmoTheFoxCCMod_BossArtifact_Types
+    internal static IEnumerable<Type> ValksCCMod_AllArtifact_Types = [
+        .. ValksCCMod_CommonArtifact_Types,
+        .. ValksCCMod_BossArtifact_Types
     ];
 
 
@@ -111,7 +97,7 @@ public sealed class ModEntry : SimpleMod
 
         KokoroApi = helper.ModRegistry.GetApi<IKokoroApi>("Shockah.Kokoro")!.V2;
 
-        Harmony = new Harmony("DragonOfTruth01.GizmoTheFoxCCMod");
+        Harmony = new Harmony("DragonOfTruth01.ValksCCMod");
 
         // This can be done in place of all Instance.Harmony.Patch() calls in class constructors.
         // However, this will case your IDE/text editor to think the function is unused (since 
@@ -128,28 +114,26 @@ public sealed class ModEntry : SimpleMod
         );
 
         // Card Frames
-        GizmoTheFoxCCMod_Character_CardFrame = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/GizmoTheFoxCCMod_character_cardframe.png"));
-        GizmoTheFoxCCMod_Potion_CardFrame = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/GizmoTheFoxCCMod_potion_cardframe.png"));
-        GizmoTheFoxCCMod_ShimmeringPotion_CardFrame = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/GizmoTheFoxCCMod_shimmeringpotion_cardframe.png"));
+        ValksCCMod_Character_CardFrame = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/ValksCCMod_character_cardframe.png"));
 
         // Character Panel
-        GizmoTheFoxCCMod_Character_Panel = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/GizmoTheFoxCCMod_character_panel.png"));
+        ValksCCMod_Character_Panel = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/ValksCCMod_character_panel.png"));
 
         // Custom Card Arts
-        GizmoTheFoxCCMod_Character_DefaultCardBG = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/CardBGs/GizmoTheFoxCCMod_character_cardbackground.png"));
+        ValksCCMod_Character_DefaultCardBG = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/CardBGs/ValksCCMod_character_cardbackground.png"));
 
         // Artifact Arts
 
         // Animation Sprites
-        GizmoTheFoxCCMod_Character_Neutral_0 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/GizmoTheFoxCCMod_character_neutral_0.png"));
-        GizmoTheFoxCCMod_Character_Neutral_1 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/GizmoTheFoxCCMod_character_neutral_1.png"));
-        GizmoTheFoxCCMod_Character_Neutral_2 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/GizmoTheFoxCCMod_character_neutral_2.png"));
+        ValksCCMod_Character_Neutral_0 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/ValksCCMod_character_neutral_0.png"));
+        ValksCCMod_Character_Neutral_1 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/ValksCCMod_character_neutral_1.png"));
+        ValksCCMod_Character_Neutral_2 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/ValksCCMod_character_neutral_2.png"));
 
-        GizmoTheFoxCCMod_Character_Mini_0 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/GizmoTheFoxCCMod_character_mini_0.png"));
+        ValksCCMod_Character_Mini_0 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/ValksCCMod_character_mini_0.png"));
 
-        GizmoTheFoxCCMod_Character_Squint_0 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/GizmoTheFoxCCMod_character_squint_0.png"));
-        GizmoTheFoxCCMod_Character_Squint_1 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/GizmoTheFoxCCMod_character_squint_1.png"));
-        GizmoTheFoxCCMod_Character_Squint_2 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/GizmoTheFoxCCMod_character_squint_2.png"));
+        ValksCCMod_Character_Squint_0 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/ValksCCMod_character_squint_0.png"));
+        ValksCCMod_Character_Squint_1 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/ValksCCMod_character_squint_1.png"));
+        ValksCCMod_Character_Squint_2 = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/character/sprites/ValksCCMod_character_squint_2.png"));
 
         // Custom Action Icons
 
@@ -157,7 +141,7 @@ public sealed class ModEntry : SimpleMod
 
         // Register Custom Decks
 
-        GizmoTheFoxCCMod_Character_Deck = helper.Content.Decks.RegisterDeck("GizmoTheFoxCCModCharacterDeck", new DeckConfiguration()
+        ValksCCMod_Character_Deck = helper.Content.Decks.RegisterDeck("ValksCCModCharacterDeck", new DeckConfiguration()
         {
             Definition = new DeckDef()
             {
@@ -165,10 +149,10 @@ public sealed class ModEntry : SimpleMod
                 titleColor = new Color("000000")
             },
 
-            DefaultCardArt = GizmoTheFoxCCMod_Character_DefaultCardBG.Sprite,
-            BorderSprite = GizmoTheFoxCCMod_Character_CardFrame.Sprite,
+            DefaultCardArt = ValksCCMod_Character_DefaultCardBG.Sprite,
+            BorderSprite = ValksCCMod_Character_CardFrame.Sprite,
 
-            Name = AnyLocalizations.Bind(["character", "GizmoTheFoxCCMod_Character", "name"]).Localize,
+            Name = AnyLocalizations.Bind(["character", "ValksCCMod_Character", "name"]).Localize,
         });
 
         // Register the alt starters for the MoreDifficulties mod
@@ -176,7 +160,7 @@ public sealed class ModEntry : SimpleMod
             "TheJazMaster.MoreDifficulties",
             new SemanticVersion(1, 3, 0),
             api => api.RegisterAltStarters(
-                deck: GizmoTheFoxCCMod_Character_Deck.Deck,
+                deck: ValksCCMod_Character_Deck.Deck,
                 starterDeck: new StarterDeck
                 {
                     cards = [
@@ -187,94 +171,64 @@ public sealed class ModEntry : SimpleMod
             )
         );  
 
-        GizmoTheFoxCCMod_Potion_Deck = helper.Content.Decks.RegisterDeck("GizmoTheFoxCCModPotionDeck", new DeckConfiguration()
-        {
-            Definition = new DeckDef()
-            {
-                color = new Color("de543d"),
-
-                titleColor = new Color("000000")
-            },
-
-            DefaultCardArt = GizmoTheFoxCCMod_Character_DefaultCardBG.Sprite,
-            BorderSprite = GizmoTheFoxCCMod_Potion_CardFrame.Sprite,
-
-            Name = AnyLocalizations.Bind(["character", "GizmoTheFoxCCMod_Potion", "name"]).Localize,
-        });
-
-        GizmoTheFoxCCMod_ShimmeringPotion_Deck = helper.Content.Decks.RegisterDeck("GizmoTheFoxCCModShimmeringPotionDeck", new DeckConfiguration()
-        {
-            Definition = new DeckDef()
-            {
-                color = new Color("86cece"),
-
-                titleColor = new Color("000000")
-            },
-
-            DefaultCardArt = GizmoTheFoxCCMod_Character_DefaultCardBG.Sprite,
-            BorderSprite = GizmoTheFoxCCMod_ShimmeringPotion_CardFrame.Sprite,
-
-            Name = AnyLocalizations.Bind(["character", "GizmoTheFoxCCMod_ShimmeringPotion", "name"]).Localize,
-        });
-
         // Register Animations
         helper.Content.Characters.V2.RegisterCharacterAnimation(new CharacterAnimationConfigurationV2()
         {
-            CharacterType = GizmoTheFoxCCMod_Character_Deck.Deck.Key(),
+            CharacterType = ValksCCMod_Character_Deck.Deck.Key(),
 
             LoopTag = "neutral",
 
             Frames = new[]
             {
-                GizmoTheFoxCCMod_Character_Neutral_0.Sprite,
-                GizmoTheFoxCCMod_Character_Neutral_1.Sprite,
-                GizmoTheFoxCCMod_Character_Neutral_2.Sprite,
-                GizmoTheFoxCCMod_Character_Neutral_0.Sprite,
-                GizmoTheFoxCCMod_Character_Neutral_1.Sprite,
-                GizmoTheFoxCCMod_Character_Neutral_2.Sprite
+                ValksCCMod_Character_Neutral_0.Sprite,
+                ValksCCMod_Character_Neutral_1.Sprite,
+                ValksCCMod_Character_Neutral_2.Sprite,
+                ValksCCMod_Character_Neutral_0.Sprite,
+                ValksCCMod_Character_Neutral_1.Sprite,
+                ValksCCMod_Character_Neutral_2.Sprite
             }
         });
 
         helper.Content.Characters.V2.RegisterCharacterAnimation(new CharacterAnimationConfigurationV2()
         {
-            CharacterType = GizmoTheFoxCCMod_Character_Deck.Deck.Key(),
+            CharacterType = ValksCCMod_Character_Deck.Deck.Key(),
             LoopTag = "mini",
             Frames = new[]
             {
-                GizmoTheFoxCCMod_Character_Mini_0.Sprite
+                ValksCCMod_Character_Mini_0.Sprite
             }
         });
 
         helper.Content.Characters.V2.RegisterCharacterAnimation(new CharacterAnimationConfigurationV2()
         {
-            CharacterType = GizmoTheFoxCCMod_Character_Deck.Deck.Key(),
+            CharacterType = ValksCCMod_Character_Deck.Deck.Key(),
             LoopTag = "squint",
             Frames = new[]
             {
-                GizmoTheFoxCCMod_Character_Squint_0.Sprite,
-                GizmoTheFoxCCMod_Character_Squint_1.Sprite,
-                GizmoTheFoxCCMod_Character_Squint_2.Sprite,
-                GizmoTheFoxCCMod_Character_Squint_0.Sprite,
-                GizmoTheFoxCCMod_Character_Squint_1.Sprite,
-                GizmoTheFoxCCMod_Character_Squint_2.Sprite
+                ValksCCMod_Character_Squint_0.Sprite,
+                ValksCCMod_Character_Squint_1.Sprite,
+                ValksCCMod_Character_Squint_2.Sprite,
+                ValksCCMod_Character_Squint_0.Sprite,
+                ValksCCMod_Character_Squint_1.Sprite,
+                ValksCCMod_Character_Squint_2.Sprite
             }
         });
 
         helper.Content.Characters.V2.RegisterCharacterAnimation(new CharacterAnimationConfigurationV2()
         {
-            CharacterType = GizmoTheFoxCCMod_Character_Deck.Deck.Key(),
+            CharacterType = ValksCCMod_Character_Deck.Deck.Key(),
             LoopTag = "gameover",
             Frames = new[]
             {
                 // The squint sprite is okay to use here...
-                GizmoTheFoxCCMod_Character_Squint_0.Sprite,
+                ValksCCMod_Character_Squint_0.Sprite,
             }
         });
         
         // Register the mod character as a playable character
-        helper.Content.Characters.V2.RegisterPlayableCharacter("GizmoTheFoxCCMod", new PlayableCharacterConfigurationV2()
+        helper.Content.Characters.V2.RegisterPlayableCharacter("ValksCCMod", new PlayableCharacterConfigurationV2()
         {
-            Deck = GizmoTheFoxCCMod_Character_Deck.Deck,
+            Deck = ValksCCMod_Character_Deck.Deck,
 
             Starters = new()
             {
@@ -283,18 +237,18 @@ public sealed class ModEntry : SimpleMod
                 ]
             },
 
-            Description = AnyLocalizations.Bind(["character", "GizmoTheFoxCCMod_Character", "description"]).Localize,
+            Description = AnyLocalizations.Bind(["character", "ValksCCMod_Character", "description"]).Localize,
 
-            BorderSprite = GizmoTheFoxCCMod_Character_Panel.Sprite
+            BorderSprite = ValksCCMod_Character_Panel.Sprite
         });
 
         // Register Cards
-        foreach (var cardType in GizmoTheFoxCCMod_AllCard_Types)
-            AccessTools.DeclaredMethod(cardType, nameof(IGizmoTheFoxCCModCard.Register))?.Invoke(null, [helper]);
+        foreach (var cardType in ValksCCMod_AllCard_Types)
+            AccessTools.DeclaredMethod(cardType, nameof(IValksCCModCard.Register))?.Invoke(null, [helper]);
 
         // Register Artifacts
-        foreach (var artifactType in GizmoTheFoxCCMod_AllArtifact_Types)
-            AccessTools.DeclaredMethod(artifactType, nameof(IGizmoTheFoxCCModArtifact.Register))?.Invoke(null, [helper]);
+        foreach (var artifactType in ValksCCMod_AllArtifact_Types)
+            AccessTools.DeclaredMethod(artifactType, nameof(IValksCCModArtifact.Register))?.Invoke(null, [helper]);
 
         // Register Custom Statuses
         

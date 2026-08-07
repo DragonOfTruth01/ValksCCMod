@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DragonOfTruth01.GizmoTheFoxCCMod;
+namespace DragonOfTruth01.ValksCCMod;
 
 public partial interface IKokoroApi
 {

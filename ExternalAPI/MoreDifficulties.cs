@@ -1,4 +1,4 @@
-namespace DragonOfTruth01.GizmoTheFoxCCMod;
+namespace DragonOfTruth01.ValksCCMod;
 
 public interface IMoreDifficultiesApi
 {
