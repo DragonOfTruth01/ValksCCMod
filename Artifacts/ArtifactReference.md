@@ -4,4 +4,5 @@ This document acts as a reference for the artifacts that are introduced in this 
 
 | Done? | Rarity | Name | Effect |
 |:-:|:-:|:-:|:-:|
-| No | Common | Name | Description |
+| No | Starter | Name | At the start of each turn, gain 1 immolate. |
+| No | Boss | Name |  |
