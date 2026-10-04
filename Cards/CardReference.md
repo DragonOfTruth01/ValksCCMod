@@ -24,5 +24,5 @@ This document acts as a reference for which cards are part of this mod.
 | No | Rare | Eternal Flame | 1 | Blazing. Gain 1 eternal flame. Inferno. Exhaust. |  |  |
 | No | Rare | Stoke | 3 | Gain 1 inner fire and 1 energy per turn. Exhaust. | Reduce cost to 2. | Instead gain 2 inner fire. |
 | No | Rare | Eruption | 0 | Gain 1 energy per turn. Exhaust. |  |  |
-| No | Rare | Embrittle | 2 | Deal 0 damage and apply brittle to the enemy ship part. Exhaust. | Increase damage to 2. | Increase cost to 3. Card no longer exhausts. |
-| No | Rare | Thermal Spalling | 3 | Blazing. Deal 0 damage and apply brittle to the enemy ship part. Then deal damage equal to your immolation. Exhaust. | Increase damage to 2. | Increase cost to 4. Card no longer exhausts. |
+| No | Rare | ??? | 1 | ??? | ??? | ??? |
+| No | Rare | Burnout | 2 | Blazing. Gain 2 evade. Set immolation to 0. Exhaust. | Reduce cost to 1. | Increase evade to 3. |
