@@ -4,7 +4,7 @@ This README was made using Louis3797's awesome-readme-template
 <div align="center">
   <h1>Valks Mod</h1>
   <p>
-    [Description here]
+    A rapier-wielding explorer from a distant realm. He uses powerful frost abilities, but endures a fiery curse...
   </p>
 </div>
 
