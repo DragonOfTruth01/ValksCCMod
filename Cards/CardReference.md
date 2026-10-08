@@ -6,7 +6,7 @@ This document acts as a reference for which cards are part of this mod.
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | No | Common | Deep Breath | 0 | Reduce immolation by 1. Retain. Exhaust. | Instead reduce immolation by 2. | Also gain 1 temp shield. |
 | No | Common | Fury | 0 | Blazing. Increase immolation by 3. Inferno. Retain. Exhaust. | Instead increase immolation by 5. | Card no longer retains or exhausts. |
-| No | Common | Kindle | 1 | Gain 1 immolate. | Also gain 1 temp shield. | Instead gain 2 immolate. |
+| No | Common | Kindle | 1 | Gain 1 temp shield and 1 immolate. | Instead gain 2 temp shield. | Instead gain 2 immolate. |
 | No | Common | ??? | 1 | ??? | ??? | ??? |
 | No | Common | Fiery Fleche | 0 | Unplayable. Autoplay. Gain 1 immolate, attack for 1 damage, and draw 1 card. | Increase attack to 2. | Increase immolate to 2. |
 | No | Common | Brazen Charge | 0 | Blazing. Unplayable. Autoplay. Deal 5 damage. Draw 2 cards next turn. | Increase damage to 7. | Increase card draw next turn to 3. |
